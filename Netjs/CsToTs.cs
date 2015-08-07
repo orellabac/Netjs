@@ -34,6 +34,7 @@ namespace Netjs
 
 		IEnumerable<IAstTransform> GetTransforms ()
 		{
+			yield return new RemoveNotDecoratedMethods();
 			yield return new FixBadNames ();
 			yield return new LiftNestedClasses ();
 			yield return new RemoveConstraints ();
@@ -1631,6 +1632,40 @@ namespace Netjs
 					methodDeclaration.Constraints.Add (c);
 
 				}
+			}
+		}
+
+
+		class RemoveNotDecoratedMethods : DepthFirstAstVisitor, IAstTransform
+		{
+			public void Run(AstNode compilationUnit)
+			{
+				compilationUnit.AcceptVisitor(this);
+			}
+
+			public override void VisitMethodDeclaration(MethodDeclaration methodDeclaration)
+			{
+				base.VisitMethodDeclaration(methodDeclaration);
+
+				bool remove = true;
+
+				foreach(AttributeSection section in methodDeclaration.Attributes)
+				{
+					foreach (ICSharpCode.NRefactory.CSharp.Attribute att in section.Attributes)
+					{
+						if (att.GetText() == "ClientSide")
+						{
+							remove = false;
+						}
+					}
+					//var str = attribute.FirstChild.ToString();
+				}
+
+				if (remove)
+				{
+					methodDeclaration.Remove();
+				}
+				
 			}
 		}
 

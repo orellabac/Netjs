@@ -1,9 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netjs", "Netjs\Netjs.csproj", "{DC5B7B7B-6890-45E1-80C6-E1B619BC0150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRefactory", "..\Netjs\Dependencies\NRefactory\NRefactory.csproj", "{0709E65F-6943-4A75-9248-3DDBA94E3D5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRefactory", "Dependencies\NRefactory\NRefactory.csproj", "{0709E65F-6943-4A75-9248-3DDBA94E3D5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientSideAnnotations", "ClientSideAnnotations\ClientSideAnnotations.csproj", "{87FE8F5C-54E0-4C57-9725-BCE16F18E384}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7F270B9D-72EC-4C97-B07E-74ACE2F982BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{D02CE986-DB85-48D4-A339-27E2FA730CA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +19,28 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0709E65F-6943-4A75-9248-3DDBA94E3D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0709E65F-6943-4A75-9248-3DDBA94E3D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0709E65F-6943-4A75-9248-3DDBA94E3D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0709E65F-6943-4A75-9248-3DDBA94E3D5F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC5B7B7B-6890-45E1-80C6-E1B619BC0150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC5B7B7B-6890-45E1-80C6-E1B619BC0150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC5B7B7B-6890-45E1-80C6-E1B619BC0150}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC5B7B7B-6890-45E1-80C6-E1B619BC0150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0709E65F-6943-4A75-9248-3DDBA94E3D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0709E65F-6943-4A75-9248-3DDBA94E3D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0709E65F-6943-4A75-9248-3DDBA94E3D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0709E65F-6943-4A75-9248-3DDBA94E3D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87FE8F5C-54E0-4C57-9725-BCE16F18E384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FE8F5C-54E0-4C57-9725-BCE16F18E384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FE8F5C-54E0-4C57-9725-BCE16F18E384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FE8F5C-54E0-4C57-9725-BCE16F18E384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02CE986-DB85-48D4-A339-27E2FA730CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02CE986-DB85-48D4-A339-27E2FA730CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02CE986-DB85-48D4-A339-27E2FA730CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02CE986-DB85-48D4-A339-27E2FA730CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D02CE986-DB85-48D4-A339-27E2FA730CA9} = {7F270B9D-72EC-4C97-B07E-74ACE2F982BB}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Netjs\Netjs.csproj

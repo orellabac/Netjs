@@ -37,6 +37,10 @@
     <Compile Include="CsToTs.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClientSideAnnotations\ClientSideAnnotations.csproj">
+      <Project>{87fe8f5c-54e0-4c57-9725-bce16f18e384}</Project>
+      <Name>ClientSideAnnotations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dependencies\NRefactory\NRefactory.csproj">
       <Project>{0709E65F-6943-4A75-9248-3DDBA94E3D5F}</Project>
       <Name>NRefactory</Name>
